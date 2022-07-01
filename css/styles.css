@@ -1,8 +1,11 @@
 :root {
   /* Fonts */
+
   --general-text-font: 'Roboto', sans-serif;
   --logo-font: 'Raleway', sans-serif;
+
   /* Colors */
+
   --primery-text-color: #757575;
   --secondary-text-color: #212121;
   --black-logo-color: #000000;
@@ -11,8 +14,34 @@
   --secondary-background-color: #f5f4fa;
   --third-background-color: #2f303a;
   --address-contacts-color: rgba(255, 255, 255, 0.6);
+  --potrfolio-border-color: #eeeeee;
+  --header-border-color: #ececec;
 }
+/* тимчасова візуалізація */
+/* * {
+  outline: 1px solid blue;
+} */
+header .container {
+  background: rgb(49, 145, 73);
+}
+.hero .container {
+  background: rgb(158, 158, 20);
+}
+.features .container {
+  background: rgb(209, 135, 135);
+}
+.employment .container {
+  background: rgb(147, 181, 233);
+}
+.team .container {
+  background: rgb(211, 60, 198);
+}
+.footer .container {
+  background: rgb(216, 136, 45);
+}
+
 /* General properties */
+
 body {
   font-family: var(--general-text-font);
   font-style: normal;
@@ -20,19 +49,41 @@ body {
   color: var(--primery-text-color);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .link {
   text-decoration: none;
 }
+
 .list {
   list-style: none;
 }
+
 .hero-button,
 .filter-button {
   font-family: 'Roboto';
   font-style: normal;
   cursor: pointer;
   border: none;
+  text-decoration: none;
 }
+
 /* Лого */
 
 .logo {
@@ -112,11 +163,17 @@ body {
 
 /* Мейн */
 
+.hero .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 .hero {
+  text-align: center;
   background: var(--third-background-color);
 }
 
 .hero-title {
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.5;
@@ -127,18 +184,23 @@ body {
 }
 
 .hero-button {
+  padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--white-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* Наші особливості */
+
+.features .container {
+  padding: 94px 215px;
+}
 
 .features-title {
   font-size: 14px;
