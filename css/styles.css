@@ -18,7 +18,7 @@
   --header-border-color: #ececec;
 }
 /* тимчасова візуалізація  */
-/* * {
+* {
   outline: 1px solid blue;
 }
 header .container {
@@ -41,7 +41,7 @@ header .container {
 }
 .portfolio .container {
   background: rgb(45, 216, 96);
-} */
+}
 
 /* General properties */
 
@@ -300,7 +300,6 @@ header .container {
   color: var(--secondary-text-color);
 }
 
-.employment-item,
 .employment-list,
 .team-list {
   display: flex;
@@ -348,9 +347,7 @@ header .container {
 /*  */
 .filter-list {
   display: flex;
-  margin: 0 auto;
   justify-content: center;
-  width: 612px;
   padding-bottom: 16px;
   margin-bottom: 34px;
 }
@@ -411,6 +408,7 @@ header .container {
   padding: 20px 24px;
 }
 /* ===== Костилі ===== */
-.portfolio-item img {
-  display: flex;
+.portfolio-item link {
+  margin: 0;
+  padding: 0;
 }
