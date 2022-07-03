@@ -1,11 +1,9 @@
 :root {
   /* Fonts */
-
   --general-text-font: 'Roboto', sans-serif;
   --logo-font: 'Raleway', sans-serif;
 
   /* Colors */
-
   --primery-text-color: #757575;
   --secondary-text-color: #212121;
   --black-logo-color: #000000;
@@ -16,31 +14,7 @@
   --address-contacts-color: rgba(255, 255, 255, 0.6);
   --potrfolio-border-color: #eeeeee;
   --header-border-color: #ececec;
-}
-/* тимчасова візуалізація  */
-* {
-  outline: 1px solid blue;
-}
-header .container {
-  background: rgb(49, 145, 73);
-}
-.hero .container {
-  background: rgb(158, 158, 20);
-}
-.features .container {
-  background: rgb(209, 135, 135);
-}
-.employment .container {
-  background: rgb(147, 181, 233);
-}
-.team .container {
-  background: rgb(211, 60, 198);
-}
-.footer .container {
-  background: rgb(216, 136, 45);
-}
-.portfolio .container {
-  background: rgb(45, 216, 96);
+  --hero-button-accent-color: #188ce8;
 }
 
 /* General properties */
@@ -62,6 +36,10 @@ p,
 ul {
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
 }
 
 .container {
@@ -254,6 +232,11 @@ header .container {
   border-radius: 4px;
 }
 
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--hero-button-accent-color);
+}
+
 /* Наші особливості */
 
 .features-list {
@@ -344,7 +327,7 @@ header .container {
 }
 
 /* Портфоліо */
-/*  */
+
 .filter-list {
   display: flex;
   justify-content: center;
@@ -398,7 +381,7 @@ header .container {
   margin-bottom: 4px;
   color: var(--secondary-text-color);
 }
-/*  */
+
 .portfolio-item {
   background: var(--white-text-color);
   border-bottom: 1px solid var(--potrfolio-border-color);
@@ -406,9 +389,4 @@ header .container {
 
 .portfolio-item div {
   padding: 20px 24px;
-}
-/* ===== Костилі ===== */
-.portfolio-item link {
-  margin: 0;
-  padding: 0;
 }
