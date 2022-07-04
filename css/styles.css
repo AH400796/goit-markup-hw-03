@@ -79,6 +79,7 @@ img {
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
+
   color: var(--black-logo-color);
 }
 
@@ -96,15 +97,17 @@ img {
 
 /* Навігація сайту */
 
-header .container {
-  padding-top: 24px;
-  padding-bottom: 24px;
+.header {
   border-bottom: 1px solid var(--header-border-color);
 }
 
 .header-content,
-.navigation,
 .navigation-list {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
   display: flex;
   align-items: center;
 }
@@ -114,6 +117,10 @@ header .container {
 }
 
 .navigation-list .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--secondary-text-color);
 }
 
@@ -126,12 +133,12 @@ header .container {
   margin-right: 50px;
 }
 
-.header-content .email {
+.header-contacts a:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-content {
-  justify-content: space-between;
+.header-contacts {
+  margin-left: auto;
 }
 
 .navigation-item {
@@ -149,6 +156,7 @@ header .container {
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
+
   color: var(--primery-text-color);
 }
 
@@ -159,6 +167,7 @@ header .container {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
+
   color: var(--address-contacts-color);
 }
 
@@ -170,6 +179,7 @@ header .container {
 
 .address p {
   margin-bottom: 9px;
+
   color: var(--white-text-color);
 }
 
@@ -188,34 +198,29 @@ header .container {
   margin-bottom: 20px;
 }
 
-.footer .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
 .footer {
-  background: var(--third-background-color);
+  padding: 60px 0;
+
+  background-color: var(--third-background-color);
 }
 
 /* Мейн */
 
-.hero .container {
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
 .hero {
+  padding: 200px 0;
   text-align: center;
-  background: var(--third-background-color);
+
+  background-color: var(--third-background-color);
 }
 
 .hero-title {
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.5;
-  text-align: center;
+  line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
   color: var(--white-text-color);
 }
 
@@ -224,8 +229,8 @@ header .container {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  text-align: center;
   letter-spacing: 0.06em;
+
   color: var(--white-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -253,6 +258,7 @@ header .container {
   line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
   color: var(--secondary-text-color);
 }
 
@@ -280,6 +286,7 @@ header .container {
   line-height: 1.167;
   text-align: center;
   letter-spacing: 0.03em;
+
   color: var(--secondary-text-color);
 }
 
@@ -293,7 +300,7 @@ header .container {
 }
 
 .team {
-  background: var(--secondary-background-color);
+  background-color: var(--secondary-background-color);
 }
 
 .team-item:not(:last-child) {
@@ -304,6 +311,7 @@ header .container {
 }
 .team-item {
   padding-bottom: 30px;
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -316,6 +324,7 @@ header .container {
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+
   color: var(--secondary-text-color);
 }
 
@@ -331,8 +340,7 @@ header .container {
 .filter-list {
   display: flex;
   justify-content: center;
-  padding-bottom: 16px;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .filter-item:not(:last-child) {
@@ -346,15 +354,16 @@ header .container {
   line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
+
   color: var(--secondary-text-color);
-  background: var(--secondary-background-color);
+  background-color: var(--secondary-background-color);
   border-radius: 4px;
 }
 
 .filter-button:hover,
 .filter-button:focus {
   color: var(--white-text-color);
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -375,18 +384,22 @@ header .container {
 }
 
 .portfolio-title {
+  margin-bottom: 4px;
+
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-bottom: 4px;
+
   color: var(--secondary-text-color);
 }
 
 .portfolio-item {
-  background: var(--white-text-color);
-  border-bottom: 1px solid var(--potrfolio-border-color);
+  background-color: var(--white-text-color);
 }
 
 .portfolio-item div {
   padding: 20px 24px;
+
+  border: 1px solid var(--potrfolio-border-color);
+  border-top: none;
 }
